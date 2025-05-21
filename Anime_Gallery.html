@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>معرض الأنمي</title>
+  <link rel="stylesheet" href="Style_Anime.css">
+  <link href="*" rel="stylesheet">
+  <button id="mode-toggle">🌙 الوضع الليلي</button>
+
+</head>
+
+
+<body>
+
+  <header>
+    <div class="container">
+      <h1 class="main-title">معرض الأنمي</h1>
+    </div>
+  </header>
+
+  <section id="anime-gallery" class="container">
+ 
+  </section>
+
+  
+
+  <footer>
+    <p>حقوق النشر &copy; 2025 - Huusein AlDAHPLI</p>
+  </footer>
+  <script>
+
+  // مصفوفة تحتوي على بيانات الأنمي
+  const animeList = [
+  {
+    title: "ناروتو",
+    description: "قصة نينجا يحلم أن يصبح الهوكاجي.",
+    image: "imeg/imeg1.jpg",
+    link: "List.html"
+  },
+  {
+    title: "هجوم العمالقة",
+    description: "إيرين يقاتل العمالقة لأجل الحرية.",
+    image: "imeg/imeg2.jpg",
+    link: "List.html"
+  },
+  {
+    title: "مذكرة الموت",
+    description: "شاب يجد مذكرة تقتل أي شخص يُكتب اسمه.",
+    image: "imeg/imeg3.jpg",
+    link: "List.html"
+  },
+  {
+    title: "ون بيس",
+    description: "لوفي يبحر للعثور على كنز ون بيس.",
+    image: "imeg/imeg4.jpg",
+    link: "List.html"
+  },
+  {
+    title: "دراغون بول",
+    description: "غوكو يقاتل الأعداء لإنقاذ الأرض.",
+    image: "imeg/imeg5.jpg",
+    link: "List.html"
+  },
+  {
+    title: "قاتل الشياطين",
+    description: "تانجيرو يواجه الشياطين لإنقاذ أخته.",
+    image: "imeg/imeg6.jpg",
+    link: "List.html"
+  },
+  {
+    title: "كود جياس",
+    description: "ليلوش يحصل على قوة السيطرة بالعين.",
+    image: "imeg/imeg7.jpg",
+    link: "List.html"
+  },
+  {
+    title: "طوكيو غول",
+    description: "شاب يتحول إلى غول بعد حادث.",
+    image: "imeg/imeg8.jpg",
+    link: "List.html"
+  },
+  {
+    title: "هانتر x هانتر",
+    description: "غون يبحث عن والده ويصبح صيادًا.",
+    image: "imeg/imeg9.jpg",
+    link: "List.html"
+  },
+  {
+    title: "نوتس باسكيت",
+    description: "فتاة تعيش مع عائلة تتحول لحيوانات.",
+    image: "imeg/imeg10.jpg",
+    link: "List.html"
+  },
+  {
+    title: "نيوجينيسيس إيفانجيليون",
+    description: "قتال الروبوتات ضد الكائنات العملاقة.",
+    image: "imeg/imeg11.jpg",
+    link: "List.html"
+  },
+  {
+    title: "بليتش",
+    description: "إيتشيغو يصبح حاصد أرواح لحماية البشر.",
+    image: "imeg/imeg12.jpg",
+    link: "List.html"
+  },
+  {
+    title: "ري: زيرو",
+    description: "سوبارو يعيد الزمن بعد كل موت.",
+    image: "imeg/imeg13.jpg",
+    link: "List.html"
+  },
+  {
+    title: "سورد آرت أونلاين",
+    description: "كيريتو يقاتل داخل لعبة واقع افتراضي.",
+    image: "imeg/imeg14.jpg",
+    link: "List.html"
+  },
+  {
+    title: "فول ميتال ألكيميست",
+    description: "أخوان يستخدمان الكيمياء لإعادة جسد أمهما.",
+    image: "imeg/imeg15.jpg",
+    link: "List.html"
+  },
+  {
+    title: "بلاك كلوفر",
+    description: "آستا يحاول أن يصبح إمبراطور السحر.",
+    image: "imeg/imeg16.jpg",
+    link: "List.html"
+  },
+  {
+    title: "هايكيو",
+    description: "فريق كرة طائرة يسعى للبطولة.",
+    image: "imeg/imeg17.jpg",
+    link: "List.html"
+  },
+  {
+    title: "ديث باريد",
+    description: "الأرواح تُحاكم في بار غريب بعد الموت.",
+    image: "imeg/imeg18.jpg",
+    link: "List.html"
+  },
+  {
+    title: "برومايسد نيفرلاند",
+    description: "أطفال يهربون من ميتم مرعب.",
+    image: "imeg/imeg19.jpg",
+    link: "List.html"
+  },
+  {
+    title: "ستينز؛غيت",
+    description: "سفر عبر الزمن يؤدي إلى كوارث.",
+    image: "imeg/imeg20.jpg",
+    link: "List.html"
+  }
+];
+
+
+const gallery = document.getElementById("anime-gallery");
+
+animeList.forEach(anime => {
+  const card = document.createElement("div");
+  card.className = "anime-card";
+
+  card.innerHTML = `
+    <a href="${anime.link}">
+      <img src="${anime.image}" alt="${anime.title}">
+    </a>
+    <h3>${anime.title}</h3>
+    <p>${anime.description}</p>
+  `;
+
+  gallery.appendChild(card);
+});
+
+
+
+    const toggleButton = document.getElementById('mode-toggle');
+
+  
+    const currentMode = localStorage.getItem('mode');
+    if (currentMode === 'dark') {
+      document.body.classList.add('dark-mode');
+      toggleButton.textContent = '☀️ الوضع النهاري';
+    } else {
+      toggleButton.textContent = '🌙 الوضع الليلي';
+    }
+
+    toggleButton.addEventListener('click', () => {
+      document.body.classList.toggle('dark-mode');
+
+      if (document.body.classList.contains('dark-mode')) {
+        toggleButton.textContent = '☀️ الوضع النهاري';
+        localStorage.setItem('mode', 'dark');
+      } else {
+        toggleButton.textContent = '🌙 الوضع الليلي';
+        localStorage.setItem('mode', 'light');
+      }
+    });
+  </script>
+
+</body>
+</html>
