@@ -22,7 +22,7 @@ a {
 }
 
 ul {
-  margin-left: 125px;
+  margin-left: 50px;
   list-style: none;
 }
 /*------------------------------*/
@@ -359,22 +359,22 @@ header * {
   }
 
   /* Mobile Devices */
-  @media (max-width: 1000px) {
+  @media (max-width: 500px) {
    
     #menu1 {
       flex-direction: column;
     }
 
     #menu1 img {
-      margin-bottom: 20px;
+      margin-bottom: 10px;
     }
 
     header .content h1 {
-      font-size: 18px;
+      font-size: 10px;
     }
 
     header .content p {
-      font-size: 14px;
+      font-size: 10px;
     }
 
     #about .about-content {
@@ -391,7 +391,7 @@ header * {
 
     #offers {
       height: auto;
-      padding: 30px 10px;
+      padding: 15px 5px;
     }
 
     #offers .offers-items {
@@ -399,17 +399,17 @@ header * {
     }
 
     #menu .menu-move .menu-item {
-      margin: 20px 10px;
+      margin: 10px 5px;
     }
 
     #daytime .daytime-items {
       display: block;
       height: auto;
-      padding: 30px 0;
+      padding: 15px 0;
     }
 
     #daytime .daytime-items .daytime-item {
-      margin-top: 20px;
+      margin-top: 10px;
     }
 
   
